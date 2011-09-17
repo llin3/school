@@ -1,0 +1,102 @@
+0 HEAD
+1 SOUR Family Echo
+2 WWW http://www.familyecho.com/
+1 FILE My Family
+1 DATE 17 SEP 2011
+1 DEST ANSTFILE
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 SUBM @I1@
+2 NAME Gemma Jones
+1 SUBN
+1 CHAR UTF-8
+0 @I1@ INDI
+1 NAME Gemma /Smith/
+2 GIVN Gemma
+2 SURN Smith
+2 _MARNM Jones
+1 SEX F
+1 BIRT
+2 DATE 30 MAR 1983
+1 FAMS @F1@
+1 FAMC @F2@
+0 @I2@ INDI
+1 NAME Brian /Smith/
+2 GIVN Brian
+2 SURN Smith
+2 _MARNM Smith
+1 SEX M
+1 BIRT
+2 DATE 27 AUG 1956
+1 FAMS @F2@
+0 @I3@ INDI
+1 NAME Jessica /Conley/
+2 GIVN Jessica
+2 SURN Conley
+2 _MARNM Smith
+1 SEX F
+1 BIRT
+2 DATE 14 JUN 1956
+1 FAMS @F2@
+0 @I4@ INDI
+1 NAME Benjamin /Jones/
+2 GIVN Benjamin
+2 SURN Jones
+2 _MARNM Jones
+1 SEX M
+1 BIRT
+2 DATE 10 APR 1985
+1 FAMS @F1@
+1 FAMC @F3@
+0 @I5@ INDI
+1 NAME Daniel /Smith/
+2 GIVN Daniel
+2 SURN Smith
+2 _MARNM Smith
+1 SEX M
+1 BIRT
+2 DATE 30 MAR 1987
+1 FAMC @F2@
+0 @I6@ INDI
+1 NAME Benjamin /Smith/
+2 GIVN Benjamin
+2 SURN Smith
+2 _MARNM Smith
+1 SEX M
+1 BIRT
+2 DATE 14 DEC 1984
+1 FAMC @F2@
+0 @I7@ INDI
+1 NAME Christian /Jones/
+2 GIVN Christian
+2 SURN Jones
+2 _MARNM Jones
+1 SEX M
+1 DEAT Y
+2 DATE 6 OCT 2007
+1 FAMS @F3@
+0 @I8@ INDI
+1 NAME Barbara /Johnston/
+2 GIVN Barbara
+2 SURN Johnston
+2 _MARNM Jones
+1 SEX F
+1 FAMS @F3@
+0 @F1@ FAM
+1 HUSB @I4@
+1 WIFE @I1@
+1 _CURRENT Y
+0 @F2@ FAM
+1 HUSB @I2@
+1 WIFE @I3@
+1 CHIL @I1@
+1 CHIL @I5@
+1 CHIL @I6@
+1 _CURRENT Y
+0 @F3@ FAM
+1 HUSB @I7@
+1 WIFE @I8@
+1 CHIL @I4@
+1 _CURRENT Y
+0 TRLR
