@@ -7,9 +7,13 @@ if __name__ == '__main__':
     if len(sys.argv) < 2:
         raise ValueError('GEDCOM filename must be specified.')
 
-    ged = GedcomReader(sys.argv[1])
+    try:
+        ged = GedcomReader(sys.argv[1])
+    except Exception as e:
+        print('\nError:', e)
+        exit()
 
-	# Print each line, its level, and its tag
+    # Print each line, its level, and its tag
     for line in ged.file:
         print(line.rstrip())
         print(ged.getLevel(line))

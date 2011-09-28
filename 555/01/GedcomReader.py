@@ -23,6 +23,8 @@ class GedcomReader:
 	# Given a filename, make sure it exists, it is a GEDCOM file, and it can be
 	# opened.
 	def __init__(self, filename):
+		self.file = None
+		
 		if not os.path.isfile(filename):
 			raise ValueError('File not found: {}'.format(filename))
 		
@@ -36,12 +38,12 @@ class GedcomReader:
 	# Close the file handle when the object dies. Not sure if this is the best
 	# way to handle this; may want to use __enter__ and __exit__ instead.
 	def __del__(self):
-		if not self.file.closed:
+		if self.file and not self.file.closed:
 			self.file.close()
 
 	# Given a GEDCOM line, return the line level
 	def getLevel(self, line):
-		return line.rstrip().split(None, 2)[0]
+		return int(line.split(None, 1)[0])
 	
 	# Given a GEDCOM line, return the tag
 	def getTag(self, line):
@@ -49,7 +51,7 @@ class GedcomReader:
 		
 		tag = l[1]
 		
-		if not int(self.getLevel(line)) and re.search('^@.+@$', tag):
+		if not self.getLevel(line) and re.search('^@.+@$', tag):
 			tag = l[2]
 		
 		return (tag in self.validTags) and tag or 'Invalid tag'
