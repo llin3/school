@@ -1,0 +1,11 @@
+0 @I1@ INDI
+1 NAME Gemma /Smith/
+2 GIVN Gemma
+2 SURN Smith
+2 _MARNM Jones
+1 SEX F
+1 BIRT
+2 DATE 30 MAR 1983
+1 FAMS @F1@
+0 @F1@ FAM
+1 WIFE @I1@
