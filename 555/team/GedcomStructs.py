@@ -5,7 +5,7 @@ class Ddict(dict):
         self.default = default
 
     def __getitem__(self, key):
-        if not self.has_key(key):
+        if not key in self:
             self[key] = self.default()
         return dict.__getitem__(self, key)
 
